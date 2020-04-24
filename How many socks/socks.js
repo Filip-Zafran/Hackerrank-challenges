@@ -1,4 +1,4 @@
-const ar = [1, 1, 2, 1, 2, 1, 3, 2, 3];
+const ar = [1, 1, 2, 1, 2, 1, 3, 2, 3, 1];
 
 // 1. SORT ARRAY
 const sortedArray = ar.sort();
@@ -28,13 +28,19 @@ if (sortedArray[i] !== sortedArray[i + 1]) {
 // 3. DIVIDE WITH 2 AND ASIGN TO A VARIABLE
 numberOfSameNumbers = sameNumbersArray.length / 2;
 
-let lastIndexNumber = sameNumbersArray[i];
-console.log("lastIndexNumber", lastIndexNumber);
+// 3.B) STORE LAST INDEX
 
-// !! NE STORE VALUE VEC BROJ INDEXA !!!!!
-// onda ga treba bacit van jedan scope
-// let lastIndex = sortedArray[i];
-// console.log("lastIndex", lastIndex);
+// let lastIndexNumberArray = [];
+// lastIndexNumber.push(sameNumbersArray.length);
+
+// console.log("lastIndexNumberArray", lastIndexNumberArray);
+
+// // SUM OF THE ARRAY + 1 for ZERO INDEX
+// var lastIndexNumber = lastIndexNumberArray.reduce(function (a, b) {
+//   return a + b;
+// }, 0);
+
+// console.log("lastIndexNumber", lastIndexNumber);
 
 console.log("sameNumbersArray", sameNumbersArray.length / 2);
 console.log("final number", numberOfSameNumbers);
@@ -42,7 +48,8 @@ console.log("final number", numberOfSameNumbers);
 //  4. STORE NUMBER IN AN ARRAY
 let endArray = [];
 
-endArray.push(numberOfSameNumbers);
+// 4.B) ROUND DOWN ADDED
+endArray.push(Math.floor(numberOfSameNumbers));
 console.log(endArray);
 
 // 5. START LOOP FROM LAST INDEX
